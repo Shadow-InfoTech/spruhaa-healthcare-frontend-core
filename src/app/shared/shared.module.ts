@@ -5,18 +5,19 @@ import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
-import { SearchPipe } from './pipes/search.pipe';
 import { ThemeConstantService } from './services/theme-constant.service';
+import { DemoNgZorroAntdModule } from '../ng-zorro-antd.module';
 
 
 
 @NgModule({
-  declarations: [SearchPipe],
+  declarations: [],
   imports: [
     RouterModule,
         CommonModule,
         NzIconModule,
         NzToolTipModule,
+        DemoNgZorroAntdModule
         // PerfectScrollbarModule
   ],
   exports: [
@@ -26,7 +27,7 @@ import { ThemeConstantService } from './services/theme-constant.service';
         HttpClientJsonpModule,
         NzIconModule,
         // PerfectScrollbarModule,
-        SearchPipe
+        
   ],
   providers: [
       ThemeConstantService

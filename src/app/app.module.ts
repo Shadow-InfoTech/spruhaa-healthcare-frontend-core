@@ -13,9 +13,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
-import { CommonLayoutComponent } from './layouts/common-layout/common-layout.component';
 import { FullLayoutComponent } from './layouts/full-layout/full-layout.component';
 import { ThemeConstantService } from './shared/services/theme-constant.service';
+import { SharedModule } from './shared/shared.module';
+import { TemplateModule } from './shared/template/template.module';
+import { CommonLayoutComponent } from './layouts/common-layout/common-layout.component';
+import { DemoNgZorroAntdModule } from './ng-zorro-antd.module';
 
 registerLocaleData(en);
 
@@ -34,7 +37,9 @@ registerLocaleData(en);
     IconsProviderModule,
     NzLayoutModule,
     NzMenuModule,
-
+    SharedModule,
+    TemplateModule,
+    DemoNgZorroAntdModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US },
