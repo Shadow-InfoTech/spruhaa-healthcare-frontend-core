@@ -1,0 +1,45 @@
+<div class="header" [ngClass]="scrolled ? 'page-scrolled' : 'page-top'" >
+    <div class="container d-flex">
+        <div class="logo logo-dark d-flex align-items-center">
+            <a href="">
+                <img src="assets/images/logo/Logo.svg" alt="Logo">
+                <img class="logo-fold" src="assets/images/logo/logo-fold.png" alt="Logo">
+            </a>
+        </div>
+        <div class="logo logo-white">
+            <a href="">
+                <img src="assets/images/logo/logo-white.png" alt="Logo">
+                <img class="logo-fold" src="assets/images/logo/logo-fold-white.png" alt="Logo">
+            </a>
+        </div>
+        <div class="nav-wrap">
+            <ul class="nav-left">
+                <!-- <li class="desktop-toggle">
+                    <a (click)="toggleFold()">
+                        <i nz-icon [nzType]="isFolded? 'menu-unfold':'menu-fold'" theme="outline"></i>
+                    </a>
+                </li>
+                <li class="mobile-toggle">
+                    <a (click)="toggleExpand()">
+                        <i nz-icon [nzType]="isExpand? 'menu-fold': 'menu-unfold'" theme="outline"></i>
+                    </a>
+                </li> -->
+            </ul>
+            <ul class="nav-right">
+
+                <li *ngFor="let a_data of routingDataset;" class="d-none d-lg-block">
+                    <a href="{{a_data.routing}}" [routerLinkActiveOptions]="{exact: true}" [routerLink]="[a_data.routing]" [routerLinkActive]="['active']" class="font-size-14 mr-2">{{a_data.section}}</a>
+                </li>
+                <li class="d-lg-none d-block">
+                    <div (click)="toggleExpand()">
+                        <!-- <i nz-icon nzType="appstore" theme="outline"></i> -->
+                        <img src="assets/images/logo/Menu.svg" alt="Menu">
+                    </div>
+                    <nz-drawer [nzWidth]="280" nzTitle="Quick View" [nzClosable]="false" [nzVisible]="quickViewVisible" nzPlacement="right" (nzOnClose)="quickViewToggle()">
+                        <!-- <app-quick-view></app-quick-view> -->
+                    </nz-drawer>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>    
