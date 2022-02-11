@@ -9,6 +9,8 @@ import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
 
 
 @NgModule({
@@ -21,7 +23,10 @@ import { NzInputModule } from 'ng-zorro-antd/input';
     NzAvatarModule,
     NzCarouselModule,
     NzFormModule,
-    NzInputModule
+    NzInputModule,
+    
+    NzLayoutModule,
+    NzMenuModule,
   ]
 })
 export class DemoNgZorroAntdModule {

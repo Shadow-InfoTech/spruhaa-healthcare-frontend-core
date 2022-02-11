@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { ThemeConstantService } from './services/theme-constant.service';
 import { DemoNgZorroAntdModule } from '../ng-zorro-antd.module';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
 
 
 
@@ -17,7 +19,9 @@ import { DemoNgZorroAntdModule } from '../ng-zorro-antd.module';
         CommonModule,
         NzIconModule,
         NzToolTipModule,
-        DemoNgZorroAntdModule
+        DemoNgZorroAntdModule,
+        NzLayoutModule,
+        NzMenuModule,
         // PerfectScrollbarModule
   ],
   exports: [

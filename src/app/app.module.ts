@@ -39,7 +39,7 @@ registerLocaleData(en);
     NzMenuModule,
     SharedModule,
     TemplateModule,
-    DemoNgZorroAntdModule
+    
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US },

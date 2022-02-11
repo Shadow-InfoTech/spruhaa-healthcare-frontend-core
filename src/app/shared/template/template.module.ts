@@ -18,6 +18,8 @@ import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
 import { ThemeConstantService } from '../services/theme-constant.service';
 import { DemoNgZorroAntdModule } from '../../ng-zorro-antd.module';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
 
 const antdModule = [
     NzAvatarModule,
@@ -43,7 +45,9 @@ const antdModule = [
         CommonModule,
         SharedModule,
         ...antdModule,
-        DemoNgZorroAntdModule
+        DemoNgZorroAntdModule,
+        NzLayoutModule,
+        NzMenuModule,
     ],
     declarations: [
         HeaderComponent,
